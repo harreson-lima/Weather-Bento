@@ -1,11 +1,37 @@
-# React + Vite
+# Weather Bento
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Weather Bento é um aplicativo de previsão do tempo minimalista, inspirado no design de caixas bento japonesas. Desenvolvido em React com [Vite](https://vitejs.dev/ "Vite"), este app fornece previsões meteorológicas pela Api da [OpenWeather](https://openweathermap.org/api "OpenWeather").
 
-Currently, two official plugins are available:
+## Funcionalidades
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-"# Weather-Bento"  git init git add README.md git commit -m "first commit" git branch -M master git remote add origin git@github.com:harreson-lima/Weather-Bento.git git push -u origin master
-"# Weather-Bento"  git init git add README.md git commit -m "first commit" git branch -M master git remote add origin git@github.com:harreson-lima/Weather-Bento.git git push -u origin master
-"# Weather-Bento"  git init git add README.md
+- **Previsão do Tempo Atual**: Exibe a temperatura atual, condições meteorológicas e outras informações relevantes.
+
+- **Previsão de 7 Dias**: Fornece previsões detalhadas para os próximos 7 dias.
+
+- **Localização**: Permite que os usuários busquem a previsão do tempo por cidade.
+
+## Tecnologias Utilizadas
+
+- **React**: 
+- **Vite**:
+- **OpenWeather Api**:
+
+## Instalação
+
+Para executar o Weather Bento localmente, siga os passos abaixo:
+
+1. Clone o repositório:
+   `git clone https://github.com/seu-usuario/weather-bento.git `
+   
+2. Acesse o diretório do projeto:
+   `cd weather-bento `
+   
+3. Instale as dependências:
+   `npm install`
+   
+4. Inicie o aplicativo:
+   `npm run dev`
+   
+##  Contribuição
+
+Contribuições são bem-vindas! Se você tiver sugestões de melhorias ou encontrar algum bug, sinta-se à vontade para abrir uma issue ou enviar um pull request.
