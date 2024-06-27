@@ -12,7 +12,7 @@ Weather Bento é um aplicativo de previsão do tempo minimalista, inspirado no d
 
 ## Tecnologias Utilizadas
 
-- **React**: 
+- **React**:
 - **Vite**:
 - **OpenWeather Api**:
 
@@ -21,17 +21,14 @@ Weather Bento é um aplicativo de previsão do tempo minimalista, inspirado no d
 Para executar o Weather Bento localmente, siga os passos abaixo:
 
 1. Clone o repositório:
-   `git clone https://github.com/seu-usuario/weather-bento.git `
-   
+   > git clone https://github.com/seu-usuario/weather-bento.git
 2. Acesse o diretório do projeto:
-   `cd weather-bento `
-   
+   > cd weather-bento
 3. Instale as dependências:
-   `npm install`
-   
+   > npm install
 4. Inicie o aplicativo:
-   `npm run dev`
-   
-##  Contribuição
+   > npm run dev
+
+## Contribuição
 
 Contribuições são bem-vindas! Se você tiver sugestões de melhorias ou encontrar algum bug, sinta-se à vontade para abrir uma issue ou enviar um pull request.
