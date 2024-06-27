@@ -21,13 +21,28 @@ Weather Bento é um aplicativo de previsão do tempo minimalista, inspirado no d
 Para executar o Weather Bento localmente, siga os passos abaixo:
 
 1. Clone o repositório:
-   > git clone https://github.com/seu-usuario/weather-bento.git
+
+```bash
+  git clone https://github.com/seu-usuario/weather-bento.git
+```
+
 2. Acesse o diretório do projeto:
-   > cd weather-bento
+
+```bash
+  cd weather-bento
+```
+
 3. Instale as dependências:
-   > npm install
+
+```bash
+  npm install
+```
+
 4. Inicie o aplicativo:
-   > npm run dev
+
+```bash
+  cnpm run dev
+```
 
 ## Contribuição
 
