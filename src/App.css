@@ -1,0 +1,15 @@
+.app {
+  width: 100%;
+  min-height: 100vh;
+  background-color: aqua;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(min(200px, 100%), 1fr));
+  padding: 1rem;
+}
+
+.card {
+  grid-column: span 2;
+  grid-row: span 2;
+  background-color: blueviolet;
+}
