@@ -1,5 +1,6 @@
 .block {
   background-color: #555;
+  border-radius: 8px;
 }
 
 .card {
