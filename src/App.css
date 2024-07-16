@@ -1,11 +1,11 @@
 .app {
   width: 100%;
   min-height: 100vh;
-  background-color: aqua;
   display: grid;
   gap: 10px;
-  grid-template-columns: repeat(auto-fit, minmax(min(200px, 100%), 1fr));
-  padding: 5rem;
+  grid-template-columns: repeat(5, minmax(min(100px, 100%), 1fr));
+  padding: 2rem;
+  margin-top: 5rem;
 }
 
 .card {

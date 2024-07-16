@@ -1,8 +1,9 @@
 /* eslint-disable no-unused-vars */
 import './App.css'
+import Bento from './components/Bento'
+import SearchInput from './components/SearchInput'
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 // import { faDroplet } from '@fortawesome/free-solid-svg-icons'
-import Block from './components/Block'
 
 function App() {
   // const url = "https://api.openweathermap.org/data/2.5/weather?q={city name}&appid={API key}"
@@ -11,14 +12,8 @@ function App() {
     // <h1>App</h1>
     <div className='app'>
       {/* <FontAwesomeIcon icon={faDroplet} /> */}
-      <Block card='card'/>
-      <Block />
-      <Block />
-      <Block />
-      <Block />
-      <Block />
-      <Block />
-      <Block />
+      <SearchInput />
+      <Bento />
     </div>
   )
 }
