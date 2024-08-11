@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 function Bento() {
   return (
-    <div>Bento</div>
+    <div className='item1'>Bento</div>
   )
 }
 

@@ -11,9 +11,18 @@ function App() {
   return (
     // <h1>App</h1>
     <div className='app'>
-      {/* <FontAwesomeIcon icon={faDroplet} /> */}
+      {/* <FontAwesomeIcon icon={faDroplet} />
       <SearchInput />
-      <Bento />
+      <Bento /> */}
+      <div className="grid-container">
+        <Bento/>
+        <div className="item"></div>
+        <div className="item"></div>
+        <div className="item"></div>
+        <div className="item"></div>
+        <div className="item6"></div>
+        <div className="item7"></div>
+      </div>
     </div>
   )
 }
