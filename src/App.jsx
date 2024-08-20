@@ -1,7 +1,5 @@
 /* eslint-disable no-unused-vars */
 import './App.css'
-import Bento from './components/Bento'
-import SearchInput from './components/SearchInput'
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 // import { faDroplet } from '@fortawesome/free-solid-svg-icons'
 
@@ -15,7 +13,9 @@ function App() {
       <SearchInput />
       <Bento /> */}
       <div className="grid-container">
-        <Bento/>
+        <div className="item1">
+          
+        </div>
         <div className="item"></div>
         <div className="item"></div>
         <div className="item"></div>
