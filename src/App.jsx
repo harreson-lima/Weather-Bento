@@ -9,7 +9,7 @@ import MainBox from './components/MainBox';
 function App() {
   
   const [data, setData] = useState({});
-  const [location, setLocation] = useState("Fortaleza");
+  const [location, setLocation] = useState("rio de janeiro");
   
   // const url = "https://api.openweathermap.org/data/2.5/weather?q={city name}&appid={API key}"
   const api_key = "4a84acaf481f1d9ea2f93508c9f77572";
