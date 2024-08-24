@@ -13,7 +13,7 @@ function App() {
   
   const [data, setData] = useState({});
   const [forecast, setForecast] = useState({});
-  const [location, setLocation] = useState('Thredbo');
+  const [location, setLocation] = useState('São Paulo');
 
   const api_key = '4a84acaf481f1d9ea2f93508c9f77572';
 
@@ -111,7 +111,7 @@ function App() {
 
         <div className='bento__box simple_box  flex' title='Wind'>
           <FontAwesomeIcon icon={faWind}/>
-          <span>{data.wind && data.wind.speed}Km/h</span>
+          <span>{data.wind && data.wind.speed} Km/h</span>
         </div>
         <div className='bento__box simple_box flex' title='Humidity'>
           <FontAwesomeIcon icon={faDroplet}/>
@@ -119,7 +119,7 @@ function App() {
         </div>
         <div className='bento__box simple_box flex' title='Pressure'>
           <FontAwesomeIcon icon={faGauge}/>
-          <span>{data.main && data.main.pressure}hPa</span>
+          <span>{data.main && data.main.pressure} hPa</span>
         </div>
         <div className='bento__box simple_box flex' title='Rain probability'>
           <FontAwesomeIcon icon={faCloudRain}/>
@@ -177,16 +177,6 @@ function App() {
               {forecast.list && Math.floor(forecast.list[33].main.temp)}°
             </div>
           </div>
-          <div className="day flex">
-            <span className="day__date">
-              Day {forecast.list && forecast.list[39].dt_txt.split(' ')[0].split('-')[2]}
-            </span>
-            <div className="day__temp">
-              {forecast.list && Math.floor(forecast.list[39].main.temp)}°
-            </div>
-          </div>
-
-          
 
         </div>
       </div>
