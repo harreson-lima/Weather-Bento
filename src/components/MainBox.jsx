@@ -19,10 +19,17 @@ function MainBox({data}) {
     (time === 'day' ? cloud_sun:cloud_moon) : clouds,
     Thunderstorm: storm,
     Rain: rain,
+    Drizzle: rain,
     Snow: snow,
     Haze: fog,
     Mist: fog,
     Fog: fog,
+    Smoke: fog,
+    Dust: fog,
+    Sand: fog,
+    Ash: fog,
+    Squall: fog,
+    Tornado: fog,
   };
 
   const weatherImage = data.weather ? weatherImages[data.weather[0].main]:null;
