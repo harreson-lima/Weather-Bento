@@ -4,10 +4,13 @@ import './App.css'
 import { useEffect, useState } from 'react'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faMagnifyingGlass, faWind, faDroplet, faGauge, faSun, faMoon, faCloudRain } from '@fortawesome/free-solid-svg-icons'
+import { faMagnifyingGlass, faWind, faDroplet, faGauge, faSun, faMoon, faCloudRain } from '@fortawesome/free-solid-svg-icons';
 
 import MainBox from './components/MainBox';
+import SearchField from './components/SearchField';
+import BentoBox from './components/BentoBox';
+import WideBox from './components/WideBox';
+import WiderBox from './components/WiderBox';
 
 function App() {
   
@@ -64,8 +67,6 @@ function App() {
     .catch(error => {
       console.error('An error occurred:', error);
     });
-
-    console.log(forecast)
     setLocation('');
   };
 
@@ -85,103 +86,61 @@ function App() {
   return (
     <div className='app'>
       <ToastContainer
-         position="top-right"
-            autoClose= {2000}
-            hideProgressBar={true}
-            closeOnClick={true}
-            pauseOnHover={true}
-            draggable={true}
-            progress={undefined}
-            theme= "light"
+        position="top-right"
+        autoClose= {2000}
+        hideProgressBar={true}
+        closeOnClick={true}
+        pauseOnHover={true}
+        draggable={true}
+        progress={undefined}
+        theme= "light"
       />
-      <div className='search flex'>
-        <input 
-          type='text'
-          placeholder='Enter location'
-          value={location}
-          onChange={handleInputChange}
-          onKeyDown={handleKeyDown}
-        />
-        <button className='flex' onClick={search}>
-          <FontAwesomeIcon icon={faMagnifyingGlass} />
-        </button>
-      </div>
+      <SearchField 
+        icon={faMagnifyingGlass} 
+        handleInputChange={handleInputChange} 
+        handleKeyDown={handleKeyDown} 
+        search={search} 
+        value={location}
+      />
       <div className='bento'>
         <MainBox data={data}/>
-
-        <div className='bento__box simple_box  flex' title='Wind'>
-          <FontAwesomeIcon icon={faWind}/>
-          <span>{data.wind && data.wind.speed} Km/h</span>
-        </div>
-        <div className='bento__box simple_box flex' title='Humidity'>
-          <FontAwesomeIcon icon={faDroplet}/>
-          <span>{data.main && data.main.humidity}%</span>
-        </div>
-        <div className='bento__box simple_box flex' title='Pressure'>
-          <FontAwesomeIcon icon={faGauge}/>
-          <span>{data.main && data.main.pressure} hPa</span>
-        </div>
-        <div className='bento__box simple_box flex' title='Rain probability'>
-          <FontAwesomeIcon icon={faCloudRain}/>
-          <span>{forecast.list && forecast.list[0].pop}%</span>
-        </div>
-        <div className='bento__box simple_box column_span--2 flex' title='Sunrise/Sunset'>
-          <div className='flex time'>
-            <FontAwesomeIcon icon={faSun}/>
-            <span>{data.sys && convertTime(data.sys.sunrise,data.timezone)}</span>
-          </div>
-          <div className='flex time'>
-            <FontAwesomeIcon icon={faMoon}/>
-            <span>{data.sys && convertTime(data.sys.sunset,data.timezone)}</span>
-          </div>
-        </div>
-        <div className='bento__box column_span--3 flex'>
-
-          <div className="day flex">
-            <span className="day__date">
-              Day {forecast.list && forecast.list[1].dt_txt.split(' ')[0].split('-')[2]}
-            </span>
-            <div className="day__temp">
-              {forecast.list && Math.floor(forecast.list[1].main.temp)}°
-            </div>
-          </div>
-          <div className="day flex">
-            <span className="day__date">
-              Day {forecast.list && forecast.list[9].dt_txt.split(' ')[0].split('-')[2]}
-            </span>
-            <div className="day__temp">
-              {forecast.list && Math.floor(forecast.list[9].main.temp)}°
-            </div>
-          </div>
-          <div className="day flex">
-            <span className="day__date">
-              Day {forecast.list && forecast.list[17].dt_txt.split(' ')[0].split('-')[2]}
-            </span>
-            <div className="day__temp">
-              {forecast.list && Math.floor(forecast.list[17].main.temp)}°
-            </div>
-          </div>
-          <div className="day flex">
-            <span className="day__date">
-              Day {forecast.list && forecast.list[25].dt_txt.split(' ')[0].split('-')[2]}
-            </span>
-            <div className="day__temp">
-              {forecast.list && Math.floor(forecast.list[25].main.temp)}°
-            </div>
-          </div>
-          <div className="day flex">
-            <span className="day__date">
-              Day {forecast.list && forecast.list[33].dt_txt.split(' ')[0].split('-')[2]}
-            </span>
-            <div className="day__temp">
-              {forecast.list && Math.floor(forecast.list[33].main.temp)}°
-            </div>
-          </div>
-
-        </div>
+        <BentoBox 
+          data={data.wind && data.wind.speed}
+          info='Km/h'
+          title='Wind'
+          icon={faWind}
+        />
+        <BentoBox 
+          data={data.main && data.main.humidity}
+          info='%'
+          title='Humidity'
+          icon={faDroplet}
+        />
+        <BentoBox 
+          data={data.main && data.main.pressure}
+          info='hPa'
+          title='Pressure'
+          icon={faGauge}
+        />
+        <BentoBox 
+          data={forecast.list && forecast.list[0].pop}
+          info='%'
+          title='Rain probability'
+          icon={faCloudRain}
+        />
+        <WideBox 
+        data={[
+          data.sys && convertTime(data.sys.sunrise,data.timezone),
+          data.sys && convertTime(data.sys.sunset,data.timezone)
+        ]}
+        icons={[faSun,faMoon]}
+        />
+        <WiderBox
+          data={forecast.list && forecast.list}
+        />
       </div>
     </div>
   )
 }
 
-export default App
+export default App;
