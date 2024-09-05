@@ -6,7 +6,7 @@ Weather Bento é um aplicativo de previsão do tempo minimalista, inspirado no d
 
 - **Previsão do Tempo Atual**: Exibe a temperatura atual, condições meteorológicas e outras informações relevantes.
 
-- **Previsão de 7 Dias**: Fornece previsões detalhadas para os próximos 7 dias.
+- **Previsão de 5 Dias**: Fornece previsões detalhadas para os próximos 5 dias.
 
 - **Localização**: Permite que os usuários busquem a previsão do tempo por cidade.
 
